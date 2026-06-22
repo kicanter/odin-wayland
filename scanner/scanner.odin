@@ -176,7 +176,7 @@ parse_procedure :: proc(doc: ^xml.Document, id: u32, type: Procedure_Type, inter
          procedure.all_null = false
       }
 
-      if arg.type == .New_Id && interface_found {
+      if arg.type == .New_Id && interface_found && type == .Request {
          procedure.ret = arg
       }
       else {
